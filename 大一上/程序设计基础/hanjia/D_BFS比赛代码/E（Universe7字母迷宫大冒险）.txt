@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+#include<iostream>
+#include<algorithm>
+#include<queue>
+#include<stack>
+#define N 100
+#define max(a,b) (a>b ? a:b)
+#define min(a,b) (a<b ? a:b)
+using namespace std;
+
+int n,m,M;
+char map[N][N];
+int vis[N][N],en[500];
+
+
+// 字母遍历记录 与 地图遍历记录
+// 可以只记录字母，想下为什么
+void dfs(int x, int y, int step)
+{
+	if(x<0 || n<=x || y<0 || m<=y)
+		return;
+	if(vis[x][y]==1 || en[map[x][y]]==1)
+		return;
+		
+	M = max(step,M);
+	
+	vis[x][y] = 1;
+	en[map[x][y]] = 1;
+	
+	dfs(x+1,y,step+1);
+	dfs(x-1,y,step+1);
+	dfs(x,y+1,step+1);
+	dfs(x,y-1,step+1);
+	
+	vis[x][y] = 0;
+	en[map[x][y]] = 0;
+}
+
+int main()
+{
+	int i,j,k,T;
+	
+	scanf("%d",&T);
+	while(T--)
+	{
+		scanf("%d %d",&n,&m);
+		getchar();
+		for(i = 0; i < n; i++)
+		{
+			for(j = 0; j < m; j++)
+				scanf("%c",&map[i][j]);
+			getchar();
+		}
+		
+		M = 0;
+		memset(en,0,sizeof(en));
+		memset(vis,0,sizeof(vis));
+		dfs(0,0,1);
+		printf("%d\n",M);
+	}
+return 0;
+}

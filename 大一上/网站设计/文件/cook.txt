@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>icafe咖啡馆</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+ </head>
+<body background="./images/background.gif">
+	<div class="header">
+        <p>
+           	 <img src="./images/banner.jpg"/>
+        </p>
+    </div>
+
+    <div class="nav">
+        <p>
+            <a href="./link/css1.html">咖啡MENU</a>|
+            <a href="./link/css2.html">咖啡COOK</a>|
+            <a href="咖啡STORY">咖啡STORY</a>|
+            <a href="咖啡NEWS">咖啡NEWS</a>|
+            <a href="咖啡PARTY">咖啡PARTY</a>
+        </p>
+    </div>
+
+    <div class="container cook">
+        <h1>咖啡COOK</h1>
+        <div class="cook-wrapper">
+            <h2>器具</h2>
+            <div class="img-wrapper">
+                <img src="images/cooker.jpg" alt="">
+            </div>
+            <div class="text-wrapper">
+                <p>               </p>
+                <p>咖啡器具，指磨制、煮制、品尝咖啡的器具。
+                    <br />较有特色的咖啡器具有蒸汽加压咖啡器、虹吸咖啡器具、
+                    <br />浓缩咖啡器、直桶形的浓缩咖啡器等。
+                    <br />是咖啡文化的重要组成部分。</p>
+            </div>
+        </div>
+
+
+        <div class="survey-wrapper">
+            <h2>调查</h2>
+            <form>
+                <p>喜欢的品牌 <input type="text">
+                    产地    
+                <select>
+                    <option value="英国">英国</option>
+                    <option value="中国">中国</option>
+                    <option value="美国">美国</option>
+                    <option value="日本">日本</option> </p>
+                </select>
+                 <p>  喜欢的原因  
+                    <input type="checkbox" value="1" name="外观"/> 外观 
+                    <input type="checkbox" value="2" name="功能"/> 功能 
+                    <input type="checkbox" value="3" name="价格"/> 价格  </p>
+                    <textarea name="其他原因……" id="" cols="30" rows="10">其他原因……</textarea></p>
+                <p>打分
+                    <input type="radio" value="1" name="1"/>1
+                    <input type="radio" value="2" name="2"/>2
+                    <input type="radio" value="3" name="3"/>3
+                    <input type="radio" value="4" name="4"/>4
+                    <input type="radio" value="5" name="5"/>5
+                </p>
+                    <input type="submit" value="确定"/>
+                    <input type="reset" value="重置"/>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>网站设计版权 2015-2020</p>
+    </div>
+</body>
+</html>

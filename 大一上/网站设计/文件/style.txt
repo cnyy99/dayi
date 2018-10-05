@@ -1,0 +1,107 @@
+
+body, h1, h2, h3, h4, h5, h6, br {
+    margin: 0;
+    padding: 0;
+	font-family: »ªÎÄÐÐ¿¬;
+}
+
+p,tr {
+	margin: 0;
+    padding: 0;
+	font-family: Microsoft YaHei;
+}
+body {
+    font-size: 16px;
+    line-height: 2.0;
+    font-weight: 300;
+    color: #111;
+    background-color: #fdfdfd;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.header, .nav, .container {
+    width: 900px;
+    margin: 0 auto 4px auto;
+}
+
+.nav {
+    text-align: center;
+    color: #fefefe;
+    background-color: #009acb;
+}
+
+
+.nav a {
+    color: #fefefe;
+    text-decoration: none;
+}
+.nav a:visited {
+    color: #fefefe;
+}
+.nav a:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+.container {
+    height: 870px;
+}
+.cook {
+    background-color: #c3ffff;
+}
+.container .left-wrapper {
+    width: 300px;
+    margin-right: 5px;
+    text-align: center;
+}
+.left-wrapper h2 {
+    padding: 10px;
+}
+
+.container .right-wrapper {
+    width: 600px;
+    padding: 30px;
+    background-color: #c3ffff;
+}
+
+.cook h1 {
+    padding: 10px;
+    text-align: center;
+}
+.cook .cook-wrapper {
+    height: 360px;
+    margin: 5px;
+}
+.cook .cook-wrapper h2 {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+.img-wrapper, .text-wrapper {
+    margin: 5px;
+    float: left;
+}
+.cook .cook-wrapper .img-wrapper {
+    width: 400px;
+    padding: 5px;
+    border: 1px dashed #000;
+}
+.cook .cook-wrapper .text-wrapper {
+    width: 400px;
+}
+.cook .survey-wrapper {
+    padding: 50px;
+    text-align: center;
+}
+
+.footer {
+    width: 863px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #532b1f;
+    background-color: #56bffe;
+}

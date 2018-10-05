@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+#include<iostream>
+#include<algorithm>
+#include<queue>
+#include<stack>
+#define N 100
+using namespace std;
+
+int n,m,f;
+char word[] = "pie";
+char map[N][N];
+int vis[N][N];
+
+void dfs(int x, int y, int step)
+{
+	if(x<0 || n<=x || y<0 || m<=y)
+		return;
+	if(map[x][y]!=word[step] || vis[x][y]==1)
+		return;
+	
+	if(step == 2)
+	{
+		f = 1;
+		return;
+	}
+		
+	vis[x][y] = 1;
+	
+	dfs(x+1,y,step+1);
+	dfs(x-1,y,step+1);
+	dfs(x,y+1,step+1);
+	dfs(x,y-1,step+1);
+	
+	dfs(x-1,y-1,step+1);
+	dfs(x-1,y+1,step+1);
+	dfs(x+1,y-1,step+1);
+	dfs(x+1,y+1,step+1);
+	
+	vis[x][y] = 0;
+}
+
+int main()
+{
+	int T,i,j,k;
+	scanf("%d",&T);
+	while(T--)
+	{
+		cin>>n>>m;
+		for(i = 0; i < n; i++)
+		{
+			for(j = 0; j < m; j++)
+				cin>>map[i][j];
+		}
+		
+		f = 0;
+		memset(vis,0,sizeof(vis));
+		for(i = 0; i < n; i++)
+		{
+			for(j = 0; j < m; j++)
+				if(map[i][j]=='p')
+					dfs(i,j,0);
+			if(f)	break;
+		}
+		if(f)
+			puts("Cutie Pie!");
+		else
+			puts("Sorry Man");
+	}
+return 0;
+}

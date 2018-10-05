@@ -1,0 +1,73 @@
+题目描述
+				    Stones
+Because of the wrong status of the bicycle, Sempr begin to walk east to west every morning and walk back every evening. Walking may cause a little tired, so Sempr always play some games this time. 
+There are many stones on the road, when he meet a stone, he will throw it ahead as far as possible if it is the odd stone he meet, or leave it where it was if it is the even stone. Now give you some informations about the stones on the road, you are to tell me the distance from the start point to the farthest stone after Sempr walk by. Please pay attention that if two or more stones stay at the same position, you will meet the larger one(the one with the smallest Di, as described in the Input) first.
+
+输入
+In the first line, there is an Integer T(1<=T<=10), which means the test cases in the input file. Then followed by T test cases. 
+For each test case, I will give you an Integer N(0<N<=100,000) in the first line, which means the number of stones on the road. Then followed by N lines and there are two integers Pi(0<=Pi<=100,000) and Di(0<=Di<=1,000) in the line, which means the position of the i-th stone and how far Sempr can throw it.
+
+
+输出
+Just output one line for one test case, as described in the Description.
+
+输入样例
+2
+2
+1 5
+2 4
+2
+1 5
+6 6
+
+输出样例
+11
+12
+
+
+标程
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<cstring>
+#include<string>
+#include<queue>
+#include<algorithm>
+#include<map>
+#include<iomanip>
+#define INF 99999999
+using namespace std;
+
+typedef pair<int,int>mp;
+
+struct cmp{
+	bool operator()(mp a,mp b){//first表示位置,second表示距离
+		if(a.first == b.first)return a.second>b.second;//距离从小到大排序
+		return a.first>b.first;//位置从小到大排序 
+	}
+};
+
+priority_queue<mp,vector<mp>,cmp>oq;
+
+int main(){//优先队列插入复杂度logN 
+	int t,n,a,b;
+	cin>>t;
+	while(t--){
+		cin>>n;
+		while(!oq.empty())oq.pop();
+		for(int i=0;i<n;++i){
+			cin>>a>>b;
+			oq.push(mp(a,b));
+		}
+		int num=1;
+		mp next;
+		while(!oq.empty()){
+			next=oq.top();
+			oq.pop();
+			if(num&1)oq.push(mp(next.first+next.second,next.second));
+			++num;
+		}
+		printf("%d\n",next.first);
+	}
+	return 0;
+} 

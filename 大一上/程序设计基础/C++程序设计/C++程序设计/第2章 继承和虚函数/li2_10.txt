@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+class Base
+{
+private:
+	int b;
+public:
+	Base(int i=10)
+	{
+		b = i;
+	}
+	virtual void show(){cout<<"Base class\n";}
+	int getb(){return b;}
+};
+
+class Derived1 : public Base
+{
+private:
+	int d;
+public:
+	Derived1(int j=20)
+	{
+		d = j;
+	}
+	void show(){cout<<"Derived class 1\n";}
+	int getd(){return d;}
+};
+
+class Derived2 : public Base
+{
+public:
+	void show(){cout<<"Derived class 2\n";}
+};
+
+int main()
+{
+	Base b(1), *pb;
+	Derived1 d1(2);
+	Derived2 d2;
+	pb = &b;
+	pb->show();
+	pb = &d1;
+	pb->show();
+	Base &bref = d2;
+	bref.show();
+
+	return 0;
+}

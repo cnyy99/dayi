@@ -1,0 +1,43 @@
+#include<iostream>
+#include<stdio.h>
+#include<math.h>
+using namespace std;
+#define N 1100000
+bool pri[N];
+int a[N];
+int main()
+{
+	int i,j,t,n;
+	//for(i=0;i<N;i+=2)
+	//	pri[i]=0;
+	//for(i=1;i<N;i+=2)
+	//	pri[i]=1;
+	//pri[2]=1;
+	//for(i=2;i*i<N;i++)
+	//{
+	//	if(pri[i])
+	//	for(j=i+i;j<N;j+=i)
+	//		pri[j]=0;
+	//}
+	t=1;
+	a[1]=0;
+	pri[2]=1;
+	for(i=4;i<N;i+=2)//第一次筛选
+		pri[i]=0;
+	for(i=1;i<N;i+=2)
+		pri[i]=1;
+	for(i=2;i<N;i++)//第二次筛选
+	{
+		if(pri[i])
+		{
+			a[i]=t;//t是记录第几个素数
+			for(j=i+i;j<N;j+=i)
+			{
+				pri[j]=0;
+				a[j]=t;//2的倍数有相同的最大质因数
+			}
+			t++;
+		}
+	}//上面的是预处理，也就是所说的打表，数组a存n最大质因数是第几个
+	while(scanf("%d",&n)==1)printf("%d\n",a[n]);
+}

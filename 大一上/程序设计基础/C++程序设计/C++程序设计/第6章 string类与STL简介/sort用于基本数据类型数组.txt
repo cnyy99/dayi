@@ -1,0 +1,20 @@
+#include <iostream>
+//#include <string>
+//#include <vector>
+#include <iterator>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	int a[] = { 5, 4, 3, 2, 1 };
+
+	sort(a, a + 5);
+
+	for (int i = 0; i < 5; i++)
+		cout << a[i] << " ";
+
+	find(a,a+5,3); // fillº¯Êý uniqueº¯Êý
+
+	return 0;
+}

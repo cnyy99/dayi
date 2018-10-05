@@ -1,0 +1,13 @@
+#include <cstdio>
+
+int main(){
+	int n,m;
+	while(scanf("%d%d",&n,&m)!=EOF){
+		if(m%2==0 && m>=2*n && m<=4*n)
+			printf("%d %d\n",2*n-(m/2),m/2-n);
+		else
+			printf("No answer\n");
+	}
+
+	return 0;
+}

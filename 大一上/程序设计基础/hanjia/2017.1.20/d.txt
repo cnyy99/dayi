@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+#define N 10e6
+int gcd(int a,int b)
+{
+	//int c=1;//非递归版求最大公约数
+	//while(c)
+	//{
+	//	c=a%b;
+	//	a=b;
+	//	b=c;
+	//}
+	//return a;
+	if(b==0)return a;//递归版求最大公约数
+	else
+		gcd(b,a%b);
+}
+int main()
+{
+	int a,b,i,t;
+	cin>>t;
+	while(t--)
+	{
+		cin>>a>>b;
+		for(i=1;i<N;i++)
+			if(gcd(a,i)==b&&i!=b)//a和c的最大公约数是b，c不等于b
+				break;
+		cout<<i<<endl;
+	}
+	return 0;
+}

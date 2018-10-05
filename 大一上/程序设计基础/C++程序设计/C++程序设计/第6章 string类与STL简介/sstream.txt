@@ -1,0 +1,24 @@
+#include<iostream>
+#include<sstream>
+using namespace std;
+
+int main(){ 
+	istringstream iss("12 34"); 
+	int a, b; 
+	iss >> a >> b; //从字符串输入流iss中读取两个数 
+	cout << a << " " << b << endl; 
+	
+	string str; 
+	ostringstream oss(str);//输出到string str中 
+	oss << a << " " << b;
+	cout << oss.str() << endl; //取出输出缓冲区的值
+	return 0;
+}
+或者
+    string input("hello,this is a test");
+    istringstream is(input);
+    string s1,s2,s3,s4;
+    is>>s1>>s2>>s3>>s4;//s1="hello,this",s2="is",s3="a",s4="test"
+    ostringstream os;
+    os<<s1<<s2<<s3<<s4;
+    cout<<os.str();

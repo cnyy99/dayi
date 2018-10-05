@@ -1,0 +1,79 @@
+#include<cstdio>
+#include<iostream>
+#include<cstring>
+#include<queue>
+#include<cstdlib>
+using namespace std;
+int dir[8][2]={{1,2},{1,-2},{-1,2},{-1,-2},{2,1},{2,-1},{-2,1},{-2,-1}};//dir数组存方向 
+int n,m;
+struct arnode
+{
+	int x,y,steps;
+};
+int main()
+{
+	while(scanf("%d%d",&n,&m)!=EOF)
+	{
+		int i,j;
+		char a[110][110];
+		int vis[110][110];
+		for(i=0;i<n;i++)
+			scanf("%s",a[i]);
+		memset(vis,0,sizeof(vis));
+		queue<arnode>q;
+		while(!q.empty())
+			q.pop();
+		arnode now,next;
+		bool tp=false;
+		for(i=0;i<n;i++)
+		{
+			for(j=0;j<m;j++)
+			{
+				if(a[i][j]=='s')//取's'的位置 
+				{
+					now.x=i; 
+					now.y=j;
+					now.steps=0;
+					tp=true;
+					break;
+				}
+			}
+			if(tp==true)
+				break;
+		}
+		int flag=0;
+		q.push(now);
+		while(!q.empty())
+		{
+			now=q.front();
+			q.pop();
+			if(a[now.x][now.y]=='e')
+			{
+				flag=1;
+				break;
+			}
+			if(vis[now.x][now.y])
+				continue;
+			vis[now.x][now.y]=1;
+			for(i=0;i<8;i++)
+			{
+				next.x=now.x+dir[i][0];
+				next.y=now.y+dir[i][1];
+				if(next.x<0||next.x>=n||next.y<0||next.y>=m)
+					continue;
+				if(vis[next.x][next.y])
+					continue;
+				if(abs(dir[i][0])==2&&a[now.x+dir[i][0]/2][now.y]=='#')
+					continue;
+				if(abs(dir[i][1])==2&&a[now.x][now.y+dir[i][1]/2]=='#')
+					continue;
+				if(a[next.x][next.y]=='.'||a[next.x][next.y]=='e')
+				{
+					next.steps=now.steps+1;
+					q.push(next);
+				}
+			}
+		}
+		flag?printf("%d\n",now.steps):printf("-1\n");
+	}
+}

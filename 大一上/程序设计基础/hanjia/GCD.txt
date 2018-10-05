@@ -1,0 +1,11 @@
+最简单的gcd算法：
+         
+int gcd(int x, int y)
+{
+     if(y == 0) return x;    
+     if(x < y)      return gcd(y,x);    
+     else        return gcd(y, x%y); 
+} 
+
+ACM中常用的gcd算法：
+int gcd(int a, int b){ return a == 0 ? b : gcd(b % a, a); } 

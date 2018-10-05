@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#define MAXN 5000 + 10
+char buf[MAXN], s[MAXN];
+int p[MAXN]; // 记录字母在buf中的位置
+int main(){
+	int n, m = 0, max = 0;
+	int i, j, k, x = 0, y = 0;
+	fgets(buf, sizeof(buf), stdin);
+	n = strlen(buf);
+	//预处理字符串
+	for (i = 0; i < n; i++)
+		if (isalpha(buf[i]))
+		{
+			p[m] = i;
+			s[m++] = toupper(buf[i]);
+		}
+	//printf("%s\n%s\n", buf, s);
+	for (i = 0; i < m; i++)
+		for (j = i; j < m; j++)
+		{
+			int ok = 1;
+			for (k = i; k <= j; k++)
+				if (s[k] != s[j - (k - i)]) ok = 0;
+			if (ok && max < j - i + 1)
+			{
+				max = j - i + 1;
+				x = p[i];
+				y = p[j];
+			}
+		}
+	printf("%d\n", max);
+	for (i = x; i <= y; i++)
+		printf("%c", buf[i]);
+
+//	getchar();
+	return 0;
+}
+
+
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#define MAXN 5000 + 10
+char buf[MAXN], s[MAXN];
+int p[MAXN]; // 记录字母在buf中的位置
+int main(){
+	int n, m = 0, max = 0;
+	int i, j, k, x = 0, y = 0;
+	fgets(buf, sizeof(buf), stdin);
+	n = strlen(buf);
+	//预处理字符串
+	for (i = 0; i < n; i++)
+		if (isalpha(buf[i]))
+		{
+			p[m] = i;
+			s[m++] = toupper(buf[i]);
+		}
+	//printf("%s\n%s\n", buf, s);
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; i - j >= 0 && i + j < m; j++) //串长度为奇数
+		{
+			if (s[i - j] != s[i + j]) break;
+			if (j * 2 + 1 > max){
+				max = j * 2 + 1;
+				x = p[i - j];
+				y = p[i + j];
+			}
+		}
+		for (j = 0; i - j >= 0 && i + j + 1 < m; j++) //串长度为偶数
+		{
+			if (s[i - j] != s[i + j + 1]) break;
+			if (j * 2 + 2 > max){
+				max = j * 2 + 2;
+				x = p[i - j];
+				y = p[i + j + 1];
+			}
+		}
+	}
+
+	printf("%d\n", max);
+	for (i = x; i <= y; i++)
+		printf("%c", buf[i]);
+	printf("\n");
+	getchar();
+	return 0;
+}

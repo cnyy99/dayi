@@ -1,0 +1,109 @@
+#include<iostream>
+using namespace std;
+
+class Shape
+{
+protected:
+	double x,y;
+public:
+	void set(double i=0, double j=0)
+	{
+		x = i;
+		y = j;
+	}
+	virtual void area()=0;
+};
+
+class Triangle: public Shape
+{
+public:
+	void area()
+	{
+		cout<<"三角形的面积是："<<0.5*x*y<<endl;
+	}
+};
+
+class Circle: public Shape
+{
+public:
+	void area()
+	{
+		cout<<"圆形的面积是："<<3.14*x*x<<endl;
+	}
+};
+
+class Rectangle: public Shape
+{
+public:
+	void area()
+	{
+		cout<<"矩形的面积是："<<x*y<<endl;
+	}
+};
+
+int main()
+{
+	Shape *p;
+	Triangle t;
+	Circle c;
+	Rectangle r;
+	p = &t;
+	p->set(5,10);
+	p->area();
+	p = &c;
+	p->set(5);
+	p->area();
+	p = &r;
+	p->set(5,10);
+	p->area();
+
+	return 0;
+}
+
+
+
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+const double PI = acos(-1.0);
+
+class Shape{
+public:
+	virtual double area() = 0;
+};
+
+class Circle : public Shape{
+private:
+	double r;
+public:
+	Circle(double r) :r(r){}
+	double area(){ return PI*r*r; }
+};
+
+class Rectangle : public Shape {
+private:
+	double length;
+	double width;
+public:
+	Rectangle(double x, double y) : length(x), width(y){}
+	double area(){ return width*length; }
+};
+
+int main()
+{
+	Circle c(3);
+	Rectangle r(5, 4);
+	Shape * p;
+	p = &c;
+	cout<<p->area()<<endl;
+	
+	p = &r;
+	cout << p->area() << endl;
+
+	p = NULL;
+
+	system("pause");
+	return 0;
+
+}

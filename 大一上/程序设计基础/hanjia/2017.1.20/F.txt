@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int gcd(int a, int b)
+{ return a == 0 ? b : gcd(b % a, a); } 
+
+int main()
+{
+	int a,b,c,T;
+	scanf("%d",&T);
+	while(T--)
+	{
+		scanf("%d %d %d",&a,&b,&c);
+		printf("%d\n",c/a + c/b - c/(a*b/gcd(a,b)));
+		// 互斥原理，注意互斥部分写法 
+	}
+return 0;
+}

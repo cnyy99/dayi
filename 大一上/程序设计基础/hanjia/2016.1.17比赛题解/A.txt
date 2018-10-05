@@ -1,0 +1,70 @@
+﻿题目描述
+				    括号匹配
+				现在，有一行括号序列，请你检查这行括号是否配对。
+
+输入
+第一行输入一个数N（0<N<=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串）。数据保证S中只含有"[","]","(",")"四种字符
+
+输出
+每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配对则输出No
+
+输入样例
+3
+[(])
+(])
+([[]()])
+
+输出样例
+No
+No
+Yes
+
+提示
+
+
+标程
+#include<stdio.h>
+#include<iostream>
+#include<algorithm>
+#include<string.h>
+#include<string>
+#include<math.h>
+#include<stack>
+using namespace std;
+#define N 1000
+int main(){
+	stack<int> s;
+	char ch[110];
+	int T;
+	scanf("%d",&T);
+	while(T--){
+		scanf("%s",ch);
+		if(ch[0] == ']' || ch[0] == ')'){
+			printf("No\n");
+			continue;
+		}
+		int flag = 1;
+		int len = strlen(ch);
+		for(int i=0;i<len;i++){
+			if(ch[i] == '(' || ch[i] == '['){
+				s.push(ch[i]);
+			}else{
+				if(ch[i] == ']' && !s.empty() && s.top() == '['){
+					s.pop();
+				}else if(ch[i] == ')' && !s.empty() && s.top() == '('){
+					s.pop();
+				}else{
+					flag = 0;
+					break;
+				}
+			}
+		}
+
+		if(!s.empty()){
+			flag = 0;
+		}
+
+		printf(flag == 1 ? "Yes\n":"No\n");
+	}
+	return 0;
+}

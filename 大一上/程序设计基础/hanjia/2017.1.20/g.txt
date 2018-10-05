@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int gcd (int a,int b)
+{
+	if(b==0)return a;
+	else gcd(b,a%b);
+}
+
+int main()
+{
+	//freopen("1.in","r",stdin);
+	//freopen("1.out","w",stdout);
+	int t,a,b,c;
+	scanf("%d",&t);
+	while(t--)
+	{
+		scanf("%d%d%d",&a,&b,&c);
+		printf("%d\n",c/a+c/b-c/(a*b/(gcd(a,b))));//|AUB|=|A|+|B|-|A½»B|;
+	}
+    return 0;
+}

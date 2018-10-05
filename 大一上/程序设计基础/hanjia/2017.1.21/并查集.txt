@@ -1,0 +1,26 @@
+int Find( int x )
+{
+	int Temp = x;
+	while( Father[Temp] != Temp )
+		Temp = Father[Temp];
+	int Ans = Temp;
+
+	int i = x;
+	while( Father[i] != Ans )
+	{
+		int j = Father[i];
+		Father[i] = Ans;
+		i = j;
+	}
+
+	return Ans;
+}
+
+void Unite( int Left, int Right )
+{
+	Left = Find(Left);
+	Right = Find(Right);
+
+	if( Left != Right )
+		Father[Right] = Left;
+}

@@ -1,0 +1,105 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person
+{
+private:
+	int num;
+	char * name;
+public:
+	Person(int n, char *str)
+	{
+		cout << "constructor\n";
+		num = n;
+		name = new char[strlen(str) + 1];
+		strcpy_s(name, strlen(str)+1,str);
+	}
+	Person(const Person &x)
+	{
+		cout << "copy constructor\n";
+		num = x.num;
+		name = new char[strlen(x.name) + 1];
+		strcpy_s(name, strlen(x.name) + 1, x.name);
+	}
+	void show()
+	{
+		cout << "num=" << num << "\nname=" << name << endl;
+	}
+	~Person(){
+		cout << "destructor\n";
+		delete[] name;
+	}
+};
+
+int main()
+{
+	Person per1(1001, "Sheldon");
+	per1.show();
+	Person per2(per1);  // Person per2 = per1;
+	per2.show();
+//	getchar();
+	return 0;
+}
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student
+{
+private:
+	int number;
+	char * name;
+	char sex;
+	int age;
+public:
+
+	Student(int a = 0, char *b = "No name", char c = '!', int d = 0);
+	Student(const Student &);
+	~Student();
+	void show();
+};
+
+
+Student::Student(int a, char *b, char c, int d)
+{
+	cout << "Constructor\n";
+	number = a;
+	name = new char[strlen(b) + 1];
+	strcpy_s(name, strlen(b)+1, b);
+	sex = c;
+	age = d;
+}
+
+Student::Student(const Student & s){
+	cout << "copy consturctor\n";
+	number = s.number;
+	name = new char[strlen(s.name) + 1];
+	strcpy_s(name, strlen(s.name) + 1, s.name);
+	sex = s.sex;
+	age = s.age;
+}
+
+Student::~Student(){
+	cout << "Destructor\n";
+	delete[] name;
+}
+
+void Student::show()
+{
+	cout << number << '\t' << name << '\t' << sex << '\t' << age << endl;
+}
+
+int main()
+{
+	Student stu1;
+	stu1.show();
+	Student stu2(101, "zhao", 'F', 18);
+	stu2.show();
+	Student s3(stu2);
+	s3.show();
+	getchar();
+	return 0;
+}

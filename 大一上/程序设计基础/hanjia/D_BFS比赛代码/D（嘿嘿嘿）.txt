@@ -1,0 +1,91 @@
+//因为障碍会消失，所以一个路径可能会走多次。所以一个点会有多种状态。
+
+#include<stdio.h>
+#include<algorithm>
+#include<iostream>
+#include<string.h>
+#include<math.h>
+#include<map>
+#include<queue>
+using namespace std;
+struct ss	//结构体保存点的位置和已经走的路程
+{
+    int x,y;
+    int l;
+};
+int pos[][2]={{1,0},{0,1},{0,-1},{-1,0}};	//方向数组
+int main()
+{
+    int a;
+    cin>>a;
+    while(a--)
+    {
+        int b,c,kk;
+        cin>>b>>c>>kk;
+        getchar();
+        char ch;
+        int s[100][100];
+        int visit[100][100][11];	//三维判重，第三维的意义是时间模k的余数，不同的余数代表不同的状态，这些不同的状态下扩展的节点可能不同。
+        memset(visit,0,sizeof(visit));
+        for(int i=0;i<b;i++)		//读
+        {
+            for(int j=0;j<c;j++)
+            {
+                cin>>ch;
+                if(ch=='S')
+                    s[i][j]=2;
+                else if(ch=='.')
+                    s[i][j]=1;
+                else if(ch=='U')
+                    s[i][j]=3;
+                else s[i][j]=0;
+            }
+            getchar();
+        }
+
+				
+        queue<ss> q;			// bfs 搜索
+        for(int i=0;i<b;i++)
+            for(int j=0;j<c;j++)
+            {
+                if(s[i][j]==2)
+                {
+                    ss pt;
+                    pt.x=i;
+                    pt.y=j;
+                    pt.l=0;
+                    visit[i][j][0]=1;
+                    q.push(pt);
+                    while(q.size())
+                    {
+                        ss pr=q.front();
+                        if(s[pr.x][pr.y]==3)
+                            break;
+                        for(int k=0;k<4;k++)
+                        {
+                            ss pp;
+                            pp.x=pr.x+pos[k][0];
+                            pp.y=pr.y+pos[k][1];
+                            pp.l=pr.l+1;
+				// 核心判断，在当前的状态下是否可以进行bfs搜索
+                            if(pp.x>=0&&pp.x<b&&pp.y>=0&&pp.y<c&&(s[pp.x][pp.y]!=0||pp.l%kk==0)&&!visit[pp.x][pp.y][pp.l%kk])
+                            {
+                                visit[pp.x][pp.y][pp.l%kk]=1;
+                                q.push(pp);
+                            }
+                        }
+                        q.pop();
+                    }
+                }
+            }
+        if(q.size()==0)
+            printf("once more!\n");
+        else
+        {
+            ss pd;
+            pd=q.front();
+            cout<<pd.l<<endl;
+        }
+    }
+    return 0;
+}

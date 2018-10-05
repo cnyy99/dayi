@@ -1,0 +1,7 @@
+[0802/222107:ERROR:renderer_main.cc(203)] Running without renderer sandbox
+[0802/222107:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304
+[0802/222119:INFO:CONSOLE(17)] "[object Object]", source: https://h5.sinaimg.cn/m/v8/js/vendor.8c77cd75.js (17)
+[0802/222119:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304
+[0802/222120:ERROR:audio_low_latency_output_win.cc(181)] Bailing out due to non-perfect timing.  Buffer size of 480 is not an even divisor of 1056
+[0802/222206:INFO:CONSOLE(17)] "[object Object]", source: https://h5.sinaimg.cn/m/v8/js/vendor.8c77cd75.js (17)
+[0802/222223:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304

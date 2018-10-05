@@ -1,0 +1,61 @@
+﻿  综合实验 - 副本.c
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(59): warning C4013: “floor”未定义；假设外部返回 int
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(67): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(97): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(79): warning C4101: “t”: 未引用的局部变量
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(154): warning C4013: “gets”未定义；假设外部返回 int
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(124): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(128): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(135): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(151): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(158): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(166): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(452): note: 参见“getch”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(177): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(178): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(206): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(452): note: 参见“getch”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(225): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(242): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(271): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(295): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(347): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(367): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(372): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(379): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(401): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(452): note: 参见“getch”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(418): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(439): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(463): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(452): note: 参见“getch”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(473): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(452): note: 参见“getch”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(503): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\conio.h(452): note: 参见“getch”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(519): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(511): warning C4101: “j”: 未引用的局部变量
+c:\users\chennan\desktop\文档\大一上\程序设计基础\综合实验\综合实验 - 副本.c(607): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(1269): note: 参见“scanf”的声明
+  综合实验.vcxproj -> C:\Users\chennan\Desktop\文档\大一上\程序设计基础\综合实验\Debug\综合实验.exe
+  综合实验.vcxproj -> C:\Users\chennan\Desktop\文档\大一上\程序设计基础\综合实验\Debug\综合实验.pdb (Partial PDB)

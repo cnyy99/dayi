@@ -1,0 +1,49 @@
+#include<stdio.h>
+#define N 99999
+#define min(a,b) (a<b ? a:b)
+int n,m,res;
+int minv[50],mins[50];
+
+void dfs(int v, int s, int level, int r, int h)
+{
+	if(level == 0)
+	{
+		if(v==n && s<res)
+			res = s;
+		return;
+	}
+	if(v+minv[level-1]>n || s+mins[level-1]>res || 2*(n-v)/r+s>=res)	// 剪枝优化
+		return;
+		
+	int i,j,k;
+	for(i = r-1; i >= level; i--)	// 逐层约束，进行dfs
+	{
+		if(level == m)
+			s = i*i;
+		k = min((n-v-minv[level-1])/(i*i), h-1);
+		for(j = k; j >= level; j--)
+			dfs(v+i*i*j, s+2*i*j, level-1, i, j);
+	}
+}
+
+int main()
+{
+	int i,j,k;
+	minv[0] = mins[0] = 0;
+	for(i = 1; i <= 21; i++)	// 每层都有最小的标准，用数组记录
+	{
+		minv[i] = minv[i-1] + i*i*i;
+		mins[i] = mins[i-1] + 2*i*i;
+	}
+	
+	while(scanf("%d %d",&n,&m) != EOF)
+	{
+		res = N;
+		dfs(0,0,m,n-1,n-1);
+		if(res == N)
+			puts("0");
+		else
+			printf("%d\n",res);
+	}
+return 0;
+}
